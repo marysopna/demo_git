@@ -24,6 +24,7 @@ def detail(request, question_id):
 
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
+    print(question, "question")
     return render(request, 'polls/results.html', {'question': question})
 
 def vote(request, question_id):
